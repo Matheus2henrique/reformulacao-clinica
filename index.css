@@ -293,7 +293,7 @@ header.scrolled {
 
 .btn-orcamento{
     font-size: 18px;
-    background-color: #8dbd60;
+    background-color: #787977;
     width: 100%;
     height: 180%;
     margin-top: -15px;
@@ -1039,33 +1039,37 @@ nav a:hover {
 
 #ul-pop-up{
   list-style: none;
-  position: relative;
-  right: 15px;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+#ul-pop-up li{
+  padding: 3px;
+
 }
 
 /* =============== MENU MOBILE =============== */
 .menuMobile {
   text-align: center;
-    display: none;
-    position: fixed;
-    top: 95px;
-    right: 16%;
-    background-color: rgba(255, 255, 255, 0.488);
-    padding: 2px 10px ;
-    border-radius: 20px;
-    z-index: 999999; /* garante que fique acima de tudo */
-    width: 160px;
-    opacity: 0;
+  display: none;
+  position: absolute;      /* ajuda a ficar embaixa da ultima div */
+  top: 100%;               /* fica logo abaixo do elemento */
+  left: 0;
+  background-color: rgba(210, 245, 130, 0.488);
+  padding: 2px 10px;
+  z-index: 999999;
+  width: 100%;
+  opacity: 0;
   pointer-events: none;
-  transform: translateX(100%);
-  transition: 0.3s;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
 }
 
 .menuMobile.abrir {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
   pointer-events: auto;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .icon-flutuante {
@@ -1135,6 +1139,10 @@ nav a:hover {
   .rodape-container li {
       display: block;
   }
+
+  #ul-pop-up{
+    margin-right: 50px;
+  }
   
   .header-content,
   .sobre-container,
@@ -1147,9 +1155,13 @@ nav a:hover {
     position: relative;
     left: -80px;
   }
+  #btn-whats-section3{
+    position: relative;
+    right: 18px;
+  }
   
   #btn-whats-header , 
-  #btn-whats-section3,
+  /* #btn-whats-section3, */
   #btn-whats-section{
     position: relative;
     left: 0px;
@@ -1202,6 +1214,7 @@ nav{
     align-items: center;
 }
 
+
 }
 
 @media (max-width: 400px) {
@@ -1244,7 +1257,7 @@ nav{
   }
 
   .sobre-container {
-    height: 500px;
+    height: 450px;
   }
 
   .prev-btn,
@@ -1254,8 +1267,10 @@ nav{
     /* top: 150px; */
   }
 
-  
-
+  #btn-whats-section3{
+    position: relative;
+    left: 3px;
+  }
   
   .header-content {
   display: flex;
@@ -1296,6 +1311,22 @@ nav{
     align-items: center;
 }
 
+.abrancando_paciente{
+  width: 80%;
+   display: block;
+  margin: 0 auto;
+}
+.beneficios p{
+  text-align: center;
+}
+.beneficios{
+  display: block;
+  margin-left: 10px;
+}
+.beneficios li{
+  font-size: 18px;
+  width: 90%;
+}
 
 }
 
@@ -1339,12 +1370,11 @@ nav{
   }
 
   #btn-whats-section2{
-    width: 50%;
-    margin-left: 140px;
+    width: 73%;
+    margin-left: 100px;
   }
   
   #btn-whats-header , 
-  #btn-whats-section3,
   #btn-whats-section{
     position: relative;
     left: 0px;
@@ -1781,6 +1811,18 @@ nav{
     z-index: 10000;
 }
 
+.beneficios {
+  display: flex;
+  flex-direction: column;   /* elementos ficam um embaixo do outro */
+  align-items: center;      /* centraliza horizontalmente */
+  justify-content: center;  /* centraliza verticalmente */
+  text-align: center;       /* centraliza o texto */
+  width: 90%;
+}
+.beneficios li {
+  text-align: justify;
+}
+
 }
 
 @media (min-width: 1300px) {
@@ -1834,6 +1876,18 @@ nav{
         grid-template-columns : 1fr;
       width: 80%;
   }
+  
+.beneficios {
+  display: flex;
+  flex-direction: column;   /* elementos ficam um embaixo do outro */
+  align-items: center;      /* centraliza horizontalmente */
+  justify-content: center;  /* centraliza verticalmente */
+  text-align: center;       /* centraliza o texto */
+  width: 90%;
+}
+.beneficios li {
+  text-align: justify;
+}
 }
 
 @media(max-width:400px){
@@ -1845,5 +1899,29 @@ nav{
 
 @media(min-width:767px) and (max-width:1025px){
   
-  
+.beneficios {
+  display: flex;
+  flex-direction: column;   /* elementos ficam um embaixo do outro */
+  align-items: center;      /* centraliza horizontalmente */
+  justify-content: center;  /* centraliza verticalmente */
+  text-align: center;       /* centraliza o texto */
+  width: 90%;
+}
+.beneficios li {
+  text-align: justify;
+}
+
+nav{
+  display: none;
+}
+  .icon-menu{
+    display: block;
+    width: 42px;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);         /* corrige o centro */
+    z-index: 10000;
+  }
 }
