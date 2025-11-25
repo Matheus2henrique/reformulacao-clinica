@@ -921,7 +921,12 @@ nav a:hover {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
-  height: 320px; /* altura fixa para todos os cards */
+  height: 560px; /* altura fixa para todos os cards */
+}
+
+.card img{
+  width: 100%;
+  height: 70%;
 }
 
 .card {
@@ -1066,6 +1071,30 @@ nav a:hover {
 .icon-menu{
   display: none;
   width: 40px;
+  
+}
+
+/* =============== MENU MOBILE =============== */
+.menuMobile {
+  position: fixed;
+  top: 130px; /* altura do seu header */
+  left: 0;
+  width: 100%;
+  background: rgba(210, 245, 130, 0.488);
+  padding: 10px 0;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: .3s ease;
+  z-index: 99999;
+}
+
+.menuMobile.abrir {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 #ul-pop-up{
@@ -1076,32 +1105,16 @@ nav a:hover {
 }
 #ul-pop-up li{
   padding: 3px;
-
+}
+#ul-pop-up li a:hover {
+  color: yellow;
+}
+#ul-pop-up li a {
+  color: #215c23;
+  text-decoration: none; /* remove sublinhado */
 }
 
-/* =============== MENU MOBILE =============== */
-.menuMobile {
-  text-align: center;
-  display: none;
-  position: absolute;      /* ajuda a ficar embaixa da ultima div */
-  top: 100%;               /* fica logo abaixo do elemento */
-  left: 0;
-  background-color: rgba(210, 245, 130, 0.488);
-  padding: 2px 10px;
-  z-index: 999999;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: 0.3s ease;
-}
 
-.menuMobile.abrir {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
 
 .icon-flutuante {
   position: fixed;       /* fica sempre fixo na tela */
@@ -1171,9 +1184,7 @@ nav a:hover {
       display: block;
   }
 
-  #ul-pop-up{
-    margin-right: 50px;
-  }
+  
   
   .header-content,
   .sobre-container,
