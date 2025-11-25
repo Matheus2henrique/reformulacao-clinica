@@ -174,5 +174,7 @@ menuMobile.querySelectorAll("a").forEach(link => {
 
 // Fechar ao dar scroll
 window.addEventListener("scroll", () => {
-  menuMobile.classList.remove("abrir");
+  if (menuMobile.classList.contains("abrir")) {
+    menuMobile.classList.remove("abrir");
+  }
 });
