@@ -1266,6 +1266,9 @@ nav{
     flex: 0 0 95%;
     margin: 0 auto;
   }
+  .btn-saber{
+  width:100%;
+}
 
   .card {
     padding: 16px;
