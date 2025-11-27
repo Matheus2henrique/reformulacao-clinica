@@ -178,3 +178,51 @@ window.addEventListener("scroll", () => {
     menuMobile.classList.remove("abrir");
   }
 });
+
+
+//   ANIMAÇÃO EXTRA DO MENU
+const menu = document.getElementById("menu-Mobile");
+
+let ultimaAbertura = false;
+
+// Observer para detectar quando a classe "abrir" muda
+const observer = new MutationObserver(() => {
+  const abriuAgora = menu.classList.contains("abrir");
+
+  // se abriu
+  if (abriuAgora && !ultimaAbertura) {
+    menu.animate(
+      [
+        { opacity: 0, transform: "translateY(-15px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      {
+        duration: 1250,
+        easing: "cubic-bezier(.2,.9,.2,1)",
+        fill: "forwards"
+      }
+    );
+  }
+
+  // se fechou
+  if (!abriuAgora && ultimaAbertura) {
+    menu.animate(
+      [
+        { opacity: 1, transform: "translateY(0)" },
+        { opacity: 0, transform: "translateY(-10px)" }
+      ],
+      {
+        duration: 200,
+        easing: "ease-in",
+        fill: "forwards"
+      }
+    );
+  }
+
+  ultimaAbertura = abriuAgora;
+});
+
+// observar mudanças de classe
+observer.observe(menu, { attributes: true, attributeFilter: ["class"] });
+
+
