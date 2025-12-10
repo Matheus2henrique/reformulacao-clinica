@@ -318,15 +318,6 @@ header {
   z-index: 9999;
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
-.tt {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  /* padding: 15px; */
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 
 header.scrolled {
   position: fixed;
@@ -365,6 +356,12 @@ header.scrolled {
 .logo-img {
   height: 100px;
   object-fit: contain;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* padding: 15px; */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .logo-text .se {
   font-size: 1.5rem;
@@ -526,14 +523,6 @@ nav a:hover {
   gap: 64px;
   max-width: 1200px;
   margin: 0 auto;
-
-  /* 🔥 EFEITO DE VIDRO (GLASSMORPHISM) */
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 30px;
 }
 
 .sobre-texto {
