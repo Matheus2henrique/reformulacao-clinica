@@ -650,6 +650,24 @@ nav a:hover {
   color: #7bcf36;
   margin-bottom: 10px;
 }
+#home-care {
+  transition: 0.3s ease;
+}
+#home-care:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid #00cc44;
+}
+
+#card-animado {
+  transition: 0.3s ease;
+}
+#card-animado:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid #00cc44;
+}
+
 .servico-descricao p {
   font-family: "Inter", sans-serif;
   font-size: 15px;
