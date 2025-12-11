@@ -114,7 +114,7 @@
   font-size: 1.2rem;
   border-radius: 13px 13px 13px 13px;
   padding: 16px;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -578,14 +578,54 @@ nav a:hover {
   z-index: 1;
 }
 
-
+/* .card2 h3{
+  font-weight: 500;
+} */
 
 .top-descricao {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   margin-bottom: 40px;
+
+  /* background-image: url(imagens/logo-oficial-removebg-preview.png); */
+  background-repeat: no-repeat;
+  background-position: center; 
+   background-size: cover; 
+   max-height: 70%;
+   /* opacity: 0.2; */
+   position: relative;
+  z-index: 0;
+  }
+
+  .top-descricao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("imagens/logo-oficial-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%; /* 👉 tamanho da imagem (pode mudar) */
+  opacity: 0.15;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  
 }
+
+/* .top-descricao > * {
+  position: relative;
+  z-index: 0;
+} */
+
+  .tt{
+    /* background-image: url(imagens/logo-oficial-removebg-preview.png); */
+  background-repeat: no-repeat;
+  background-position: center; 
+   background-size: cover; 
+   max-height: 70%;
+   opacity: 0.2;
+  }
+  
 .card-geral{
   width: 80%;
   display: flex;
@@ -601,7 +641,7 @@ nav a:hover {
 .top-descricao h3 {
   font-family: "Inter", sans-serif;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   color: #7bcf36;
   margin-bottom: 10px;
 }
@@ -645,6 +685,7 @@ nav a:hover {
   background-color: #f4f2f2;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
 }
 .servico-descricao .icon2 img {
   width: 70px;
@@ -654,12 +695,20 @@ nav a:hover {
 .servico-descricao h3 {
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  /* font-weight: 600; */
+  font-weight: 600;
   color: #7bcf36;
   margin-bottom: 10px;
 }
-#home-care {
-  transition: 0.3s ease;
+#home-care , #cursos {
+ transition: 0.3s ease;
+}
+.cursos-link{
+    text-decoration: none;
+}
+#cursos:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid #00cc44;
 }
 #home-care:hover {
   transform: scale(1.05);
@@ -705,6 +754,19 @@ nav a:hover {
     max-width: 500px;   /* evita ficar muito esticado em telas pequenas */
     margin: 0 auto;     /* centraliza cada card */
   }
+
+   .top-descricao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%; 
+  opacity: 0.3;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  
+}
 }
 
 
@@ -844,7 +906,7 @@ nav a:hover {
   font-weight: 500px;
 }
 .rodape-conteudo {
-  display: flex;
+  /* display: flex; */
   padding-bottom: 30px;
 }
 .rodape-menu {
@@ -899,6 +961,8 @@ nav a:hover {
 }
 .rodape-info {
   margin-top: 24px;
+  /* display: flex; */
+  gap: 20px;
 }
 .rodape-info p {
   margin: 0.6rem 0;
@@ -918,7 +982,22 @@ nav a:hover {
   text-align: left;
   color: #215c23;
   font-size: 1rem;
+  position: relative;
+    z-index: 0;
 }
+
+  .rodape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("imagens/logo-oficial-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%; /* 👉 tamanho da imagem (pode mudar) */
+  opacity: 0.2;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  }
 
 .carousel-wrapper {
   display: flex;
@@ -1158,12 +1237,29 @@ nav a:hover {
   align-items: center;
   margin: 30px auto;
   margin-top: 80px; 
+  
+}
+.beneficios-text{
+  position: relative;
+    z-index: 0;
 }
 
+  .beneficios-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("imagens/logo-oficial-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%; /* 👉 tamanho da imagem (pode mudar) */
+  opacity: 0.1;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  }
 .beneficios-text p{
     font-size: 30px;
     color: #388e3c;
-  font-weight: 500px;
+  font-weight: 600;
 }
 
 .beneficios-text li{
@@ -1287,6 +1383,18 @@ nav{
     align-items: center;
 }
 
+.top-descricao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%; 
+  opacity: 0.3;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  height: 4000px;
+}
 
 }
 
@@ -1411,7 +1519,18 @@ nav{
     overflow: visible;
     margin-top: 0px;
   }
-
+.top-descricao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%; 
+  opacity: 0.3;         
+  pointer-events: none;   /* não atrapalha clique */
+  z-index: -1;
+  
+}
   .header-content{
     margin-bottom: 120px;
   }
@@ -1910,6 +2029,10 @@ nav{
   font-size: 14px;
 }
 
+.rodape-info{
+  display: block;
+}
+
 }
 
 @media (min-width: 1200px) {
@@ -1965,6 +2088,9 @@ nav{
     border-radius: 10px;
     opacity: 0.93;
   }
+  .rodape-info{
+    display: flex;
+  }
 }
 
 @media(min-width:10px){
@@ -1991,6 +2117,10 @@ nav{
 }
 .beneficios li {
   text-align: justify;
+}
+
+.rodape-info{
+  display: block;
 }
 }
 
@@ -2087,4 +2217,5 @@ nav{
      width: 70%; 
      height: 40%;
   }
+  
 }
